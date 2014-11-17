@@ -1,0 +1,9 @@
+# Java .gitignore
+
+# Classes
+*.class
+
+# Packages
+*.ear
+*.jar
+*.war
