@@ -1,7 +1,5 @@
 package rocketdonkey.algorithms.searching;
 
-import java.util.Arrays;
-
 
 /**
  * Knuth-Morris-Pratt search algorithm.
