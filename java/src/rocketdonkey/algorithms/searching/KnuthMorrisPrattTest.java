@@ -32,8 +32,18 @@ public class KnuthMorrisPrattTest {
     );
 
     for (Map.Entry<String, int[]> pair : tables.entrySet()) {
-      KnuthMorrisPratt kmp = new KnuthMorrisPratt("", pair.getKey());
+      KnuthMorrisPratt kmp = new KnuthMorrisPratt(pair.getKey(), "");
       assertArrayEquals(pair.getValue(), kmp.getFailure());
     }
   }
+
+  @Test
+  public void testSearch() {
+    assertEquals(-1, KnuthMorrisPratt.search("jey", "donkey"));
+    assertEquals(3, KnuthMorrisPratt.search("key", "donkey"));
+    assertEquals(5, KnuthMorrisPratt.search("mallow", "marshmallow"));
+    assertEquals(4, KnuthMorrisPratt.search("ABABAC", "ABABABABAC"));
+
+  }
+
 }
