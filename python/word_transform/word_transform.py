@@ -186,13 +186,12 @@ def TimeRun(source, target):
   path = word_graph.FindPath()
   path_time = '%f' % (time.time() - path_start)
 
-
   if not path:
     path_time = 'No match'
     path = []
     path_len = 'N/A'
   else:
-    # THe number of moves (length of the path - 1).
+    # The number of moves (length of the path - 1).
     path_len = len(path) - 1
 
 
